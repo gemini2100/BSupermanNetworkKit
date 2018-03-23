@@ -1,0 +1,6 @@
+framework module BSupermanNetworkKit {
+  umbrella header "BSupermanNetworkKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

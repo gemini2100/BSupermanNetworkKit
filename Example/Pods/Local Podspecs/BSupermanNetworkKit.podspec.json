@@ -1,0 +1,28 @@
+{
+  "name": "BSupermanNetworkKit",
+  "version": "0.1.0",
+  "summary": "Network Kit.",
+  "description": "Network Kit used by Moya.",
+  "homepage": "https://github.com/gemini2100/BSupermanNetworkKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "gemini2100": "gemini2100@msn.com"
+  },
+  "source": {
+    "git": "https://github.com/gemini2100/BSupermanNetworkKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "11.0"
+  },
+  "source_files": "BSupermanNetworkKit/Classes/**/*",
+  "swift_version": "4.0",
+  "dependencies": {
+    "Moya/RxSwift": [
+      "~> 11.0"
+    ]
+  }
+}

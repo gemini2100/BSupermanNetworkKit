@@ -1,0 +1,6 @@
+framework module Pods_BSupermanNetworkKit_Example {
+  umbrella header "Pods-BSupermanNetworkKit_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

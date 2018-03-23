@@ -1,0 +1,51 @@
+{
+    "error": "SUCCESS",
+    "msg": "",
+    "data": {
+        "uuid": "007",
+        "sessionKey": "8b7a5b49-f162-53f6-44ca-000000002774",
+        "cfg": {
+            "versionCode": "4",
+            "splashDelaySeconds": "5",
+            "taskAreaMin": "1",
+            "taskAreaDefault": "4",
+            "taskAreaMax": "6",
+            "publishTaskMoneyMax": "1000",
+            "findTaskAreaDefault": "3",
+            "emergencyPrice": "10",
+            "taskLabels": [
+                           "跑腿代办",
+                           "维修搬运",
+                           "现场求助",
+                           "预约拼团",
+                           "家政服务",
+                           "跳蚤市场",
+                           "逛街购物",
+                           "疑难解答",
+                           "异想天开"
+                           ],
+            "redLabeCash": "1",
+            "redLabeSuperMoney": "10",
+            "refreshMSGCash": "1",
+            "refreshMSGSuperMoney": "10",
+            "depositFee": "5",
+            "depositTime": "3",
+            "depositSingleMax": "1000",
+            "depositDailyTimes": "3",
+            "depositFeeMax": "200",
+            "squarePublishCost": "20",
+            "squareRangeCostSm": "10",
+            "squareRangeCostRMB": "1",
+            "reportCost": "20",
+            "finishAwardPercent": "0.1",
+            "finishAwardMax": "200",
+            "finishAwardMaxDaily": "2000",
+            "signAwardFirst": "1",
+            "signAwardMax": "5",
+            "registerAward": "1",
+            "authAward": "10",
+            "taskValidTime": "1800",
+            "taskCompleteTime": "1800"
+        }
+    }
+}

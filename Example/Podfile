@@ -1,0 +1,6 @@
+use_frameworks!
+
+target 'BSupermanNetworkKit_Example' do
+  pod 'BSupermanNetworkKit', :path => '../'
+
+end
