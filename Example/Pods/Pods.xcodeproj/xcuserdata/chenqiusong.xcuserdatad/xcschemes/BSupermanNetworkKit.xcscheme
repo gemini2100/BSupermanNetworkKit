@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8E57B6BE029019245D73A348E2252094"
+               BlueprintIdentifier = "C340A806406B367BA49399643D5EC0A7"
                BlueprintName = "BSupermanNetworkKit"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "BSupermanNetworkKit.framework">

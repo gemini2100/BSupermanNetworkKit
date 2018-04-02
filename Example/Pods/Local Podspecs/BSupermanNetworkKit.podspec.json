@@ -1,6 +1,6 @@
 {
   "name": "BSupermanNetworkKit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "Network Kit.",
   "description": "Network Kit used by Moya.",
   "homepage": "https://github.com/gemini2100/BSupermanNetworkKit",
@@ -13,10 +13,10 @@
   },
   "source": {
     "git": "https://github.com/gemini2100/BSupermanNetworkKit.git",
-    "tag": "0.1.0"
+    "tag": "0.1.1"
   },
   "platforms": {
-    "ios": "11.0"
+    "ios": "10.0"
   },
   "source_files": "BSupermanNetworkKit/Classes/**/*",
   "swift_version": "4.0",

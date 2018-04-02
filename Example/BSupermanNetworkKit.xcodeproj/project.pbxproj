@@ -39,9 +39,7 @@
 		72B6468161275B0C04C3DBEF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		7AB980A2C25363B0F42760EF /* Pods-BSupermanNetworkKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BSupermanNetworkKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BSupermanNetworkKit_Example/Pods-BSupermanNetworkKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		936477247230F730A5C827FE /* BSupermanNetworkKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BSupermanNetworkKit.podspec; path = ../BSupermanNetworkKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A0458669957784ECDB7160C8 /* Pods-BSupermanNetworkKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BSupermanNetworkKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BSupermanNetworkKit_Tests/Pods-BSupermanNetworkKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B6A5172D83DB7C56C6759E98 /* Pods_BSupermanNetworkKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BSupermanNetworkKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B7189B04D1536CC5F1CB8F6F /* Pods-BSupermanNetworkKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BSupermanNetworkKit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BSupermanNetworkKit_Tests/Pods-BSupermanNetworkKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,8 +124,6 @@
 			children = (
 				7AB980A2C25363B0F42760EF /* Pods-BSupermanNetworkKit_Example.debug.xcconfig */,
 				2E0C98D43542D9E623D60F9E /* Pods-BSupermanNetworkKit_Example.release.xcconfig */,
-				A0458669957784ECDB7160C8 /* Pods-BSupermanNetworkKit_Tests.debug.xcconfig */,
-				B7189B04D1536CC5F1CB8F6F /* Pods-BSupermanNetworkKit_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -410,7 +406,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 49D8CWA84D;
 				INFOPLIST_FILE = BSupermanNetworkKit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bsuperman.demo.BSupermanNetworkKit-Example";
@@ -430,7 +426,7 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 49D8CWA84D;
 				INFOPLIST_FILE = BSupermanNetworkKit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bsuperman.demo.BSupermanNetworkKit-Example";
