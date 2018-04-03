@@ -21,17 +21,17 @@ class ViewController: UIViewController {
         let endpoint = BSupermanNetworkAPI.userLogin(name: "11223344553", password: "123456")
 
         
-        let resultObservable: Observable<LoginEntity> = networkKitRequest(endPoint: endpoint)
+        let resultObservable: Observable<(String?,LoginEntity?)> = networkKitRequest(endPoint: endpoint)
         
-            resultObservable.subscribe(onNext: { ( result:LoginEntity) in
+            _ = resultObservable.subscribe(onNext: { ( result:(responseError:String?,data:LoginEntity?)) in
                 print("get result: \(result)")
-                
+
             },
                        onError: { (error:Error) in print(" Get error:\(error)")},
                        onCompleted: {print("onCompleted!!")},
                        onDisposed: {print("onDisposed!!")})
         
-        //
+        
         
 //        BSupermanNetworkManager<BSupermanNetworkAPI>.requestAPI(endPoint: endpoint , isUserSampleFile: false).subscribe { (result:Event<ResponseResult<LoginEntity>>) in
 //            print("\(result)")

@@ -24,13 +24,6 @@ fileprivate let otherExceptionMessgae = "网络连接异常，请检查网络设
 fileprivate let jsonExceptionMessgae =  "网络数据异常，请检查网络设置!"
 fileprivate let sampleDelaySeconds = 2.0
 
-public enum ResponseError:Error
-{
-    case fromService(String)
-    case jsonParseError(String)
-    case otherException(String)
-}
-
 // 固定返回数据的json格式
 
 class ResponseData<T: Codable>: Codable
@@ -55,7 +48,14 @@ class ResponseData<T: Codable>: Codable
     }
 }
 
-public func networkKitRequest <JsonDataEntityType: Codable,networkAPI:TargetType> (endPoint: networkAPI, debugMode:Bool = false) -> Observable<JsonDataEntityType>
+
+/// 请求网络数据
+///
+/// - Parameters:
+///   - endPoint: Moya的TargetType子类,包括了URL、请求方式等信息
+///   - debugMode: 是否debug模式，debug模式下直接使用工程下的responseJsonSample.json文件代替返回数据
+/// - Returns: 元组(errorString,data),errorString不为空表示返回错误描述，data肯定为空。反之表示成功，errorString为nil，data有数据,因为返回的都是onNext所以注意内存泄漏，必须放到disposeBag里或者其他方式释放资源
+public func networkKitRequest <JsonDataEntityType: Codable,networkAPI:TargetType> (endPoint: networkAPI, debugMode:Bool = false) -> Observable<(String?,JsonDataEntityType?)>
 {
     return Observable.create(
         {
@@ -85,26 +85,28 @@ public func networkKitRequest <JsonDataEntityType: Codable,networkAPI:TargetType
                         {
                             if let data:JsonDataEntityType = responseJson.data
                             {
-                                observer.onNext(data)
-                                observer.onCompleted()
+                                //observer.onNext(data)
+                                //observer.onCompleted()
+                                observer.onNext((nil,data))
                             }
                             else //获得数据结构解析失败
                             {
-                                observer.onError(ResponseError.jsonParseError(jsonExceptionMessgae))
+                                observer.onNext((jsonExceptionMessgae,nil))                                
                             }
                         }
                         else
                         {
                             //从服务器返回服务器提示的错误
-                            observer.onError(ResponseError.fromService(errorMessage))
+                            observer.onNext((errorMessage,nil))
                         }
                     }
                     catch //let jsonErr
                     {
                         //print("Json decode error: \(jsonErr.localizedDescription)")
-                        observer.onError(ResponseError.jsonParseError(jsonExceptionMessgae))
+                        observer.onNext((jsonExceptionMessgae,nil))
                     }
-                case .failure(_):                        observer.onError(ResponseError.otherException(otherExceptionMessgae))
+                case .failure(_):
+                    observer.onNext((otherExceptionMessgae,nil))
                 }
             })
             return Disposables.create{callBack.cancel()}
