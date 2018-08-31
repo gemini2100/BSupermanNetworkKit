@@ -68,7 +68,7 @@ public func networkKitRequest <JsonDataEntityType: Codable,networkAPI:TargetType
                 return MoyaProvider<networkAPI>(stubClosure: stubClosure)
             }()
             
-            let callBack = provider.request(endPoint, completion:
+            let callBack = provider.request(endPoint, callbackQueue:DispatchQueue.global(qos:.background),completion:
             {
                 responseResult in
                 switch responseResult
